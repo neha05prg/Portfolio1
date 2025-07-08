@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neha S | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Poppins', sans-serif; }
+    </style>
+  </head>
+  <body class="bg-[#f5f7fa] dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 min-h-screen">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full top-0 left-0 z-50 bg-[#f5f7fa] dark:bg-gray-800 text-[#1a1a1a] dark:text-white shadow-md transition-all duration-300">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="#hero" class="text-2xl font-bold tracking-widest text-neon-blue drop-shadow-glow">NEHAS</a>
+        <button id="nav-toggle" class="md:hidden text-[#1a1a1a] dark:text-white focus:outline-none transition-transform duration-300" aria-label="Toggle navigation" tabindex="0">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <ul id="nav-menu" class="hidden md:flex space-x-8 text-lg font-semibold">
+          <li><a href="#hero" class="nav-link hover:text-neon-blue transition-colors duration-300">Home</a></li>
+          <li><a href="#about" class="nav-link hover:text-neon-blue transition-colors duration-300">About</a></li>
+          <li><a href="#projects" class="nav-link hover:text-neon-blue transition-colors duration-300">Projects</a></li>
+          <li><a href="#timeline" class="nav-link hover:text-neon-blue transition-colors duration-300">Experience</a></li>
+          <li><a href="#contact" class="nav-link hover:text-neon-blue transition-colors duration-300">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="ml-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[#00e6fe] transition-colors duration-300" role="switch" tabindex="0">
+          <span id="theme-toggle-icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 space-y-4 text-lg font-semibold bg-[#f5f7fa] dark:bg-gray-800 text-[#1a1a1a] dark:text-white bg-opacity-95">
+        <li><a href="#hero" class="nav-link block hover:text-neon-blue transition-colors duration-300">Home</a></li>
+        <li><a href="#about" class="nav-link block hover:text-neon-blue transition-colors duration-300">About</a></li>
+        <li><a href="#projects" class="nav-link block hover:text-neon-blue transition-colors duration-300">Projects</a></li>
+        <li><a href="#timeline" class="nav-link block hover:text-neon-blue transition-colors duration-300">Experience</a></li>
+        <li><a href="#contact" class="nav-link block hover:text-neon-blue transition-colors duration-300">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="relative flex items-center justify-center min-h-screen pt-24 pb-12 bg-[#f5f7fa] dark:bg-gray-900 overflow-hidden transition-colors duration-300">
+      <!-- Animated Blobs Background -->
+      <div class="absolute inset-0 -z-10">
+        <div class="blob bg-gradient-to-tr from-pink-200 via-blue-200 to-purple-200 opacity-70 w-80 h-80 rounded-full absolute top-10 left-1/4 animate-blob1"></div>
+        <div class="blob bg-gradient-to-tr from-blue-100 via-green-200 to-cyan-200 opacity-60 w-72 h-72 rounded-full absolute bottom-10 right-1/4 animate-blob2"></div>
+        <div class="blob bg-gradient-to-tr from-purple-100 via-pink-100 to-blue-200 opacity-50 w-64 h-64 rounded-full absolute top-1/2 left-1/2 animate-blob3"></div>
+      </div>
+      <div class="max-w-2xl w-full flex flex-col items-center text-center px-4">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 text-neon-blue drop-shadow-glow">Creative Full Stack Developer</h1>
+        <p id="hero-intro" class="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8 opacity-0 translate-y-6">Motivated developer passionate about building beautiful, scalable, and user-friendly web applications. I love turning ideas into reality with code and design.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#projects" class="cta-btn bg-[#00e6fe] text-white font-semibold px-7 py-3 rounded-lg shadow-lg hover:scale-105 hover:shadow-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2">View My Work</a>
+          <a href="#contact" class="cta-btn bg-white dark:bg-gray-800 text-[#00e6fe] dark:text-[#00e6fe] border-2 border-[#00e6fe] font-semibold px-7 py-3 rounded-lg shadow hover:bg-[#00e6fe] hover:text-white hover:scale-105 hover:shadow-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2">Contact Me</a>
+        </div>
+      </div>
+    </section>
+    <!-- About Me -->
+    <section id="about" class="relative bg-[#f5f7fa] dark:bg-gray-900 py-20 px-4 flex items-center justify-center transition-colors duration-300">
+      <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12 md:gap-20">
+        <!-- Profile Image -->
+        <div class="flex-shrink-0 flex items-center justify-center w-full md:w-auto">
+          <div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full shadow-lg bg-gradient-to-tr from-[#00e6fe] via-white to-[#a78bfa] p-2 animate-float">
+            <img src="NEHA.jpg" alt="Neha S Profile" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl" />
+          </div>
+        </div>
+        <!-- About Content -->
+        <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-4 fade-up">About Me</h2>
+          <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-6 fade-up delay-100">I'm Neha, a passionate Full Stack Developer who loves building beautiful, scalable, and user-centric web applications. I thrive on solving problems and bringing creative ideas to life with code and design.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full fade-up delay-200">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Flask</span>
+            <span class="skill-badge">Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="bg-[#f5f7fa] dark:bg-gray-900 py-20 px-4 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-10 text-center fade-up">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center fade-up">
+            <div class="w-full h-40 mb-4 rounded-xl overflow-hidden bg-gradient-to-tr from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Villa Bliss" class="object-cover w-full h-full" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Villa Bliss</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3 text-center">A villa booking management system with user login, admin panel, and payment integration.</p>
+            <div class="flex flex-wrap gap-2 mb-4 justify-center">
+              <span class="project-badge">PHP</span>
+              <span class="project-badge">HTML</span>
+              <span class="project-badge">CSS</span>
+              <span class="project-badge">JavaScript</span>
+              <span class="project-badge">MySQL</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="#" class="project-btn alt">Live Demo</a>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+         
+          <!-- Project Card 3 -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center fade-up delay-200">
+            <div class="w-full h-40 mb-4 rounded-xl overflow-hidden bg-gradient-to-tr from-purple-100 via-pink-100 to-blue-100 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Portfolio Website" class="object-cover w-full h-full" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Portfolio Website</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3 text-center">
+              A modern, animated portfolio to showcase projects and skills with a creative UI.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4 justify-center">
+              <span class="project-badge">HTML</span>
+              <span class="project-badge">Tailwind CSS</span>
+              <span class="project-badge">JavaScript</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="#" class="project-btn">GitHub</a>
+              <a href="#" class="project-btn alt">Live Demo</a>
+            </div>
+          </div>
+          <!-- Project Card 4: Zapzoo Grocery Store -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center fade-up delay-300">
+            <div class="w-full h-40 mb-4 rounded-xl overflow-hidden bg-gradient-to-tr from-green-100 via-yellow-100 to-lime-100 flex items-center justify-center">
+              <img src="https://static.vecteezy.com/system/resources/previews/012/443/044/original/online-food-order-grocery-delivery-woman-shop-at-an-online-store-the-product-catalog-on-the-web-browser-page-stay-at-home-concept-quarantine-or-self-isolation-png.png" alt="Zapzoo Grocery Store" class="object-cover w-full h-full" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Zapzoo Grocery Store</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3 text-center">
+              A full-featured online grocery store with product search, categories, shopping cart, order tracking, multiple payment options, and an admin panel.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4 justify-center">
+              <span class="project-badge">HTML</span>
+              <span class="project-badge">CSS</span>
+              <span class="project-badge">JavaScript</span>
+              <span class="project-badge">PHP</span>
+              <span class="project-badge">MySQL</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="#" class="project-btn">GitHub</a>
+              <a href="#" class="project-btn alt">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience / Education -->
+    <section id="timeline" class="bg-[#f5f7fa] dark:bg-gray-900 py-20 px-4 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center fade-up">Experience & Education</h2>
+        <div class="relative timeline">
+          <!-- Vertical line -->
+          <div class="absolute left-1/2 top-0 w-1 h-full bg-gradient-to-b from-[#00e6fe] via-[#a78bfa] to-[#f5f7fa] dark:to-gray-900 rounded-full -translate-x-1/2"></div>
+          <div class="flex flex-col gap-16">
+            <!-- Timeline Entry 1 (Right) -->
+            <div class="timeline-entry md:flex-row flex flex-col items-center md:items-start fade-side-right">
+              <div class="md:w-1/2 md:pr-8 flex justify-end md:justify-center order-2 md:order-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-md">
+                  <div class="flex items-center gap-2 mb-2"><span class="text-2xl">🛠️</span><span class="font-semibold text-gray-800 dark:text-white">Intern – Yuga Yatra Retail (OPC) Pvt. Ltd.</span></div>
+                  <div class="text-sm text-gray-500 dark:text-gray-300 mb-1">Jan 2025 – Apr 2025</div>
+                  <div class="text-gray-700 dark:text-gray-300 font-medium mb-1">Yuga Yatra Retail (OPC) Pvt. Ltd.</div>
+                  <div class="text-gray-600 dark:text-gray-300 text-sm">Worked on web development projects, collaborating with cross-functional teams to deliver scalable solutions.</div>
+                </div>
+              </div>
+              <div class="timeline-marker flex flex-col items-center order-1 md:order-2 md:items-center md:justify-center">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 border-4 border-[#00e6fe] shadow-lg text-2xl -mt-2 md:mt-0">🛠️</span>
+              </div>
+              <div class="md:w-1/2"></div>
+            </div>
+            <!-- Timeline Entry 2 (Left) -->
+            <div class="timeline-entry md:flex-row flex flex-col items-center md:items-start fade-side-left">
+              <div class="md:w-1/2"></div>
+              <div class="timeline-marker flex flex-col items-center order-1 md:order-2 md:items-center md:justify-center">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 border-4 border-[#a78bfa] shadow-lg text-2xl -mt-2 md:mt-0">🏢</span>
+              </div>
+              <div class="md:w-1/2 md:pl-8 flex justify-start md:justify-center order-2 md:order-3">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-md">
+                  <div class="flex items-center gap-2 mb-2"><span class="font-semibold text-gray-800 dark:text-white">Bachelor of Computer Applications (BCA)</span></div>
+                  <div class="text-sm text-gray-500 dark:text-gray-300 mb-1">2022 – 2025</div>
+                  <div class="text-gray-700 dark:text-gray-300 font-medium mb-1">Milagres College</div>
+                  <div class="text-gray-600 dark:text-gray-300 text-sm">Academic training in web development, programming, and database management.</div>
+                </div>
+              </div>
+            </div>
+            <!-- Timeline Entry 3 (Right) -->
+            <div class="timeline-entry md:flex-row flex flex-col items-center md:items-start fade-side-right">
+              <div class="md:w-1/2 md:pr-8 flex justify-end md:justify-center order-2 md:order-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-md">
+                  <div class="flex items-center gap-2 mb-2"><span class="text-2xl">🎓</span><span class="font-semibold text-gray-800 dark:text-white">Python Full Stack Development</span></div>
+                  <div class="text-sm text-gray-500 dark:text-gray-300 mb-1">2025 (Ongoing)</div>
+                  <div class="text-gray-700 dark:text-gray-300 font-medium mb-1">Pentagon Space (Online)</div>
+                  <div class="text-gray-600 dark:text-gray-300 text-sm">Learning advanced full stack development with Python and modern frameworks.</div>
+                </div>
+              </div>
+              <div class="timeline-marker flex flex-col items-center order-1 md:order-2 md:items-center md:justify-center">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 border-4 border-[#00e6fe] shadow-lg text-2xl -mt-2 md:mt-0">🎓</span>
+              </div>
+              <div class="md:w-1/2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Me -->
+    <section id="contact" class="bg-[#f5f7fa] dark:bg-gray-900 py-20 px-4 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+        <!-- Left: Message & Socials -->
+        <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0 fade-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-4">Let's Connect</h2>
+          <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-6">Have a project idea or collaboration in mind? I'd love to hear from you.</p>
+          <div class="flex gap-6 justify-center md:justify-start">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg></a>
+            <a href="mailto:nehasdeviga5@gmail.com" class="social-icon" aria-label="Email"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm-16 12V8.99l7.99 6.99c.39.34.96.34 1.35 0L20 8.99V18H4z"/></svg></a>
+          </div>
+        </div>
+        <!-- Right: Contact Form -->
+        <div class="flex-1 w-full max-w-md fade-up delay-100">
+          <?php if (isset($_GET['success'])): ?>
+            <div class="mb-4 p-3 rounded-lg text-center font-semibold <?php echo $_GET['success'] === '1' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> dark:bg-gray-800 dark:text-green-400 dark:text-red-400">
+              <?php echo $_GET['success'] === '1' ? 'Thank you! Your message has been sent.' : 'Sorry, there was an error sending your message.'; ?>
+            </div>
+          <?php endif; ?>
+          <form action="contact.php" method="POST" class="space-y-6">
+            <div class="relative">
+              <input type="text" id="name" name="name" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
+              <label for="name" class="floating-label dark:text-gray-300">Name</label>
+            </div>
+            <div class="relative">
+              <input type="email" id="email" name="email" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
+              <label for="email" class="floating-label dark:text-gray-300">Email</label>
+            </div>
+            <div class="relative">
+              <textarea id="message" name="message" required rows="4" class="peer floating-input resize-none dark:bg-gray-800 dark:text-white" placeholder=" "></textarea>
+              <label for="message" class="floating-label dark:text-gray-300">Message</label>
+            </div>
+            <button type="submit" class="w-full bg-[#00e6fe] text-white font-semibold py-3 rounded-lg shadow-lg hover:scale-105 hover:shadow-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#f5f7fa] dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-6 px-4 fade-up transition-colors duration-300">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Left: Copyright -->
+        <div class="text-gray-600 dark:text-gray-300 text-sm">© 2025 Neha.S <span class="text-pink-500"></span></div>
+        <!-- Center: Quick Links -->
+        <nav class="flex gap-6 order-3 md:order-2">
+          <a href="#hero" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </nav>
+        <!-- Right: Social Icons -->
+        <div class="flex gap-4 order-2 md:order-3">
+          <a href="https://github.com/neha05prg" target="_blank" rel="noopener" class="footer-social" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg></a>
+          <a href= "https://www.linkedin.com/in/neha-s-1a1658319" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg></a>
+          <a href="mailto:nehasdeviga5@gmail.com" class="footer-social" aria-label="Email"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm-16 12V8.99l7.99 6.99c.39.34.96.34 1.35 0L20 8.99V18H4z"/></svg></a>
+        </div>
+      </div>
+      <!-- Scroll to Top Button -->
+      <button id="scrollToTop" class="fixed bottom-6 right-6 z-50 bg-[#00e6fe] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:shadow-neon hover:animate-bounce transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2" aria-label="Scroll to top">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+      </button>
+    </footer>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+    <script>
+      function setTheme(isDark) {
+        const html = document.documentElement;
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-toggle-icon');
+        if (isDark) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          if (icon) icon.textContent = '🌞';
+          if (toggleBtn) toggleBtn.setAttribute('aria-checked', 'true');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          if (icon) icon.textContent = '🌙';
+          if (toggleBtn) toggleBtn.setAttribute('aria-checked', 'false');
+        }
+      }
+
+      // On page load: apply saved theme or default to light
+      document.addEventListener('DOMContentLoaded', function() {
+        const saved = localStorage.getItem('theme');
+        setTheme(saved === 'dark');
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+          themeToggle.addEventListener('click', function() {
+            setTheme(!document.documentElement.classList.contains('dark'));
+          });
+          themeToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setTheme(!document.documentElement.classList.contains('dark'));
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 
