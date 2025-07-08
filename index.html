@@ -210,32 +210,39 @@
     </section>
     <!-- Contact Me -->
     <!-- Right: Contact Form -->
-<div class="flex-1 w-full max-w-md fade-up delay-100">
-    <form action="https://formsubmit.co/nehasdevadiga5@gmail.com" method="POST" class="space-y-6">
-      <!-- Hidden Inputs for customization -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://your-username.github.io/#contact">
-  
-      <div class="relative">
-        <input type="text" id="name" name="name" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
-        <label for="name" class="floating-label dark:text-gray-300">Name</label>
+    <div class="flex-1 w-full max-w-md fade-up delay-100">
+        <form action="https://formsubmit.co/nehasdevadiga5@gmail.com" method="POST" class="space-y-6">
+          <!-- Hidden Inputs for customization -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://neha05prg.github.io/Portfolio1/#contact">
+      
+          <!-- Name -->
+          <div class="relative">
+            <input type="text" id="name" name="name" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
+            <label for="name" class="floating-label dark:text-gray-300">Name</label>
+          </div>
+      
+          <!-- Email -->
+          <div class="relative">
+            <input type="email" id="email" name="email" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
+            <label for="email" class="floating-label dark:text-gray-300">Email</label>
+          </div>
+      
+          <!-- Message -->
+          <div class="relative">
+            <textarea id="message" name="message" required rows="4" class="peer floating-input resize-none dark:bg-gray-800 dark:text-white" placeholder=" "></textarea>
+            <label for="message" class="floating-label dark:text-gray-300">Message</label>
+          </div>
+      
+          <!-- Submit Button -->
+          <button type="submit" class="w-full bg-[#00e6fe] text-white font-semibold py-3 rounded-lg shadow-lg hover:scale-105 hover:shadow-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2">
+            Send Message
+          </button>
+        </form>
       </div>
-  
-      <div class="relative">
-        <input type="email" id="email" name="email" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
-        <label for="email" class="floating-label dark:text-gray-300">Email</label>
-      </div>
-  
-      <div class="relative">
-        <textarea id="message" name="message" required rows="4" class="peer floating-input resize-none dark:bg-gray-800 dark:text-white" placeholder=" "></textarea>
-        <label for="message" class="floating-label dark:text-gray-300">Message</label>
-      </div>
-  
-      <button type="submit" class="w-full bg-[#00e6fe] text-white font-semibold py-3 rounded-lg shadow-lg hover:scale-105 hover:shadow-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2">Send Message</button>
-    </form>
-  </div>
+      
   
       </div>
     </section>
